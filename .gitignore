@@ -1,0 +1,28 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Checkpoints and large artifacts (kept on ComputeHub only)
+checkpoints/*.pt
+checkpoints/*.ckpt
+*.pt
+*.pth
+*.ckpt
+
+# Logs and telemetry
+*.log
+runs/
+wandb/
+.pytest_cache/
+
+# Local OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,15 @@
+# Core scientific computing
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+pyyaml>=6.0
+
+# Deep learning and physics-informed models
+torch>=2.0.0
+
+# Graph and network dynamics (Phase 4)
+networkx>=3.0
+
+# Optional experiment tracking
+wandb>=0.15.0
