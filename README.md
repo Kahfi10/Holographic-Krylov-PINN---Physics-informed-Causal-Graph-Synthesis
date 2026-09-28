@@ -10,8 +10,8 @@ Repository riset komputasi untuk implementasi model **HK-PCG (Fase 1 & Fase 2)**
 ### 1. Kloning / Unduh Repositori
 Di Terminal UNISMUH ComputeHub:
 ```bash
-git clone <URL_REPO_ANDA>
-cd ke8
+git clone https://github.com/Kahfi10/Holographic-Krylov-PINN---Physics-informed-Causal-Graph-Synthesis.git
+cd Holographic-Krylov-PINN---Physics-informed-Causal-Graph-Synthesis
 ```
 
 ### 2. Instalasi Dependensi
