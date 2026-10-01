@@ -55,3 +55,19 @@ Seluruh luaran tersimpan otomatis di direktori `checkpoints/`:
 python plot_results.py
 ```
 Akan menghasilkan file `figure_convergence.png` siap pakai untuk naskah jurnal internasional.
+
+---
+
+## 🌀 Fase 3: Simulasi Kompleksitas Krylov & Panah Waktu Emergen
+
+Untuk menjalankan simulasi dinamika operator kuantum rantai spin ($L=6$ spin) dan ekstraksi koefisien Lanczos $b_n$:
+
+```bash
+# Jalankan simulasi 3 rezim (Integrable, Chaotic, Open Dissipative)
+python run_fase3_krylov.py --spins 6
+
+# Hasilkan figur 3-panel 600 DPI (Lanczos, Complexity K(t), Arrow of Time)
+python plot_krylov_results.py
+```
+File metrik akan tersimpan di `checkpoints/krylov_metrics.json` dan gambar di `figure_krylov_dynamics.png`.
+
