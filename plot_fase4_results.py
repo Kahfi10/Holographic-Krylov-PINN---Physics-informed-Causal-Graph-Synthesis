@@ -77,8 +77,8 @@ def generate_fase4_figures(metrics_path="checkpoints/fase4_metrics.json", output
     # Panel (c): Spacetime Equilibrium Convergence Telemetry
     ax_c = axes[2]
     ax_c.semilogy(epochs, total_loss, label="Total HK-PCG Objective", color="#1f77b4", linewidth=2.0)
-    ax_c.semilogy(epochs, pde_loss, label="Klein-Gordon Residual ($\\Box \\phi$)", color="#d62728", linewidth=1.8, linestyle="--")
-    ax_c.semilogy(epochs, init_loss, label="Initial State Boundary Discrepancy", color="#2ca02c", linewidth=1.5, linestyle=":")
+    ax_c.semilogy(epochs, pde_loss, label="Klein-Gordon PDE Residual", color="#d62728", linewidth=1.8, linestyle="--")
+    ax_c.semilogy(epochs, init_loss, label="Initial State Discrepancy", color="#2ca02c", linewidth=1.5, linestyle=":")
     
     ax_c.set_xlabel("Optimization Epochs")
     ax_c.set_ylabel("Spacetime Residual (Log Scale)")
