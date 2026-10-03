@@ -71,3 +71,19 @@ python plot_krylov_results.py
 ```
 File metrik akan tersimpan di `checkpoints/krylov_metrics.json` dan gambar di `figure_krylov_dynamics.png`.
 
+---
+
+## 🌐 Fase 4: Integrasi GNN-PINN (Mini HK-PCG)
+
+Untuk menjalankan sintesis ruang-waktu kausal diskrit ke kontinu (800 node causet + regularisasi Klein-Gordon):
+
+```bash
+# Jalankan pelatihan integrasi GNN-PINN Mini HK-PCG
+python train_fase4_hk_pcg.py --nodes 800 --epochs 2500
+
+# Hasilkan figur 3-panel 600 DPI (Causal Set, Continuous Field, Equilibrium Convergence)
+python plot_fase4_results.py
+```
+File metrik akan tersimpan di `checkpoints/fase4_metrics.json`, bobot model di `checkpoints/hk_pcg_best.pt`, dan gambar di `figure_fase4_hk_pcg.png`.
+
+
