@@ -19,14 +19,14 @@ plt.rcParams.update({
     "figure.dpi": 600
 })
 
-from generate_figure_1_bw import generate_figure_1_bw
+from generate_figure_1_chevron import generate_figure_1_chevron_structure
 
 def generate_figure_1_architecture(output_path="figure_1_system_architecture.png"):
     """
-    Figure 1: Clean, Minimalist, High-Impact Monochrome (Black & White) 
-    System Architecture of the HK-PCG Framework (600 DPI).
+    Figure 1: High-Impact Chevron & Vertical Column Process Architecture 
+    Matching User's Reference Layout in Ultra-Neat Academic Monochrome (600 DPI).
     """
-    generate_figure_1_bw(output_path=output_path)
+    generate_figure_1_chevron_structure(output_path=output_path)
 
 def generate_figure_2_wavefunction(output_path="figure_2_quantum_wavefunction.png"):
     """
