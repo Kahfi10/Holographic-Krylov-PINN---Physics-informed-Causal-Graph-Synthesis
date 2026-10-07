@@ -307,8 +307,13 @@ class DocxManuscriptExporter:
         p_sp.paragraph_format.space_after = Pt(6)
 
     def save(self, output_path="MANUSCRIPT_DRAFT.docx"):
-        self.doc.save(output_path)
-        print(f"[SUCCESS] Exported native Word manuscript with Office Math to: {output_path}")
+        try:
+            self.doc.save(output_path)
+            print(f"[SUCCESS] Exported native Word manuscript with Office Math to: {output_path}")
+        except PermissionError:
+            alt_path = output_path.replace(".docx", "_updated.docx")
+            self.doc.save(alt_path)
+            print(f"[NOTE] '{output_path}' sedang dibuka di Microsoft Word. File versi baru disimpan sebagai: {alt_path}")
 
 def build_full_docx():
     print("=" * 70)

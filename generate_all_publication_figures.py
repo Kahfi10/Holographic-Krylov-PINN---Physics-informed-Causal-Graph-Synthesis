@@ -19,60 +19,14 @@ plt.rcParams.update({
     "figure.dpi": 600
 })
 
+from generate_figure_1_bw import generate_figure_1_bw
+
 def generate_figure_1_architecture(output_path="figure_1_system_architecture.png"):
     """
-    Figure 1: Comprehensive End-to-End System Architecture of HK-PCG Framework.
+    Figure 1: Clean, Minimalist, High-Impact Monochrome (Black & White) 
+    System Architecture of the HK-PCG Framework (600 DPI).
     """
-    fig, ax = plt.subplots(figsize=(14, 5.5))
-    ax.set_xlim(0, 14)
-    ax.set_ylim(0, 6)
-    ax.axis("off")
-
-    # Define stage blocks: (x, y, w, h, title, subtitle, color)
-    blocks = [
-        (0.5, 1.2, 2.5, 3.6, "1. Quantum Microstate", 
-         "• N-Qubit Spin Lattice\n• Hamiltonian H(J, hx, hz)\n• Liouvillian Super-Op\n  L(O) = [H, O] + iD(O)", "#e8f4f8", "#0288d1"),
-        (3.8, 1.2, 2.7, 3.6, "2. Krylov Complexity", 
-         "• Lanczos Iteration (bn)\n• Operator Spread O(t)\n• Universal Chaos Bound\n• Arrow of Time:\n  v_arrow = dK/dt > 0", "#eef9f0", "#2e7d32"),
-        (7.3, 1.2, 2.8, 3.6, "3. Discrete Causal Set", 
-         "• 800 Poisson Events\n• Lightcone Causal Order\n  (dt > 0, ds^2 > 0)\n• Directed Edge Weights\n  modulated by v_arrow", "#fef9e7", "#f57f17"),
-        (10.9, 1.2, 2.6, 3.6, "4. Hybrid GNN-PINN", 
-         "• Directed Message Passing\n• Autograd Klein-Gordon:\n  Box phi + m^2 phi = 0\n• Emergent Continuum\n  Spacetime Metric", "#fbebee", "#c2185b")
-    ]
-
-    for x, y, w, h, title, body, bg_col, border_col in blocks:
-        # Card shadow / background
-        box = patches.FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.15", 
-                                     facecolor=bg_col, edgecolor=border_col, linewidth=2.0)
-        ax.add_patch(box)
-        
-        # Header banner
-        header = patches.FancyBboxPatch((x, y + h - 0.75), w, 0.75, boxstyle="round,pad=0.08", 
-                                        facecolor=border_col, edgecolor="none")
-        ax.add_patch(header)
-        ax.text(x + w/2, y + h - 0.38, title, ha="center", va="center", color="white", 
-                fontsize=11, fontweight="bold")
-        
-        # Body text
-        ax.text(x + 0.15, y + h - 1.05, body, ha="left", va="top", color="#222222", 
-                fontsize=10, linespacing=1.35)
-
-    # Connecting Arrows
-    arrow_props = dict(boxstyle="rarrow,pad=0.2", facecolor="#37474f", edgecolor="none")
-    ax.text(3.4, 3.0, " ", ha="center", va="center", bbox=arrow_props, fontsize=12)
-    ax.text(6.9, 3.0, " ", ha="center", va="center", bbox=arrow_props, fontsize=12)
-    ax.text(10.5, 3.0, " ", ha="center", va="center", bbox=arrow_props, fontsize=12)
-
-    # Main Title
-    ax.text(7.0, 5.5, "Figure 1: Holographic Krylov-PINN (HK-PCG) Synthesis Framework", 
-            ha="center", va="center", fontsize=14, fontweight="bold", color="#111111")
-    ax.text(7.0, 5.15, "End-to-End Synthesis Pipeline: From Microscopic Quantum Dissipation to Emergent Relativistic Spacetime", 
-            ha="center", va="center", fontsize=11, style="italic", color="#555555")
-
-    plt.tight_layout()
-    plt.savefig(output_path, dpi=600, bbox_inches="tight")
-    plt.close()
-    print(f"[SUCCESS] Figure 1 saved to: {output_path}")
+    generate_figure_1_bw(output_path=output_path)
 
 def generate_figure_2_wavefunction(output_path="figure_2_quantum_wavefunction.png"):
     """
